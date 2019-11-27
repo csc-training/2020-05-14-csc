@@ -135,8 +135,7 @@ Modify the block below if there are any special requirements.
 {% endcomment %}
 
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <strong>Requirements:</strong> All course participants are required to have a Haka account and password. If you do not have a Haka account, please contact the course staff. The workshop will take place in an IT classroom with computers available to each participant. The classroom computers will be pre-configured for the course. If they wish, participants may also bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
 </p>
 
 {% comment%}
