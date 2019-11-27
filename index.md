@@ -5,7 +5,7 @@ address: "Keilaranta 14, Espoo, Finland"      # full street address of workshop 
 country: "fi"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latitude: "60.1780621"     # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "24.8304687"    # decimal longitude of the workshop venue (use https://www.latlong.net)
+longitude: "24.82828"    # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "May 14-15, 2020"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 5:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2020-05-14      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
@@ -28,11 +28,10 @@ double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
-
-
 {% comment %}
 For a workshop please delete the following block
 {% endcomment %}
+
 <div class="alert alert-danger">
 This is the workshop template. Delete these lines and use it to customize your
 own website. If you are running a self-organized workshop or have not put in a
@@ -48,6 +47,7 @@ Check DC curriculum
 
 {% if site.carpentry == "dc" or site.carpentry == "dc" %}
 {% unless site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-socsci" or site.curriculum == "dc-geospatial" %}
+
 <div class="alert alert-warning">
 It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
 </div>
@@ -63,6 +63,7 @@ are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
 {% if page.eventbrite %}
+
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
   frameborder="0"
@@ -71,7 +72,6 @@ displayed if the 'eventbrite' field in the header is not set.
   scrolling="auto">
 </iframe>
 {% endif %}
-
 
 <h2 id="general">General Information</h2>
 
@@ -112,6 +112,7 @@ can use https://itouchmap.com/latlong.html to find the lat/long of an
 address.
 {% endcomment %}
 {% if page.latitude and page.longitude %}
+
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
@@ -128,6 +129,7 @@ DATE
 This block displays the date and links to Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
+
 <p id="when">
   <strong>When:</strong>
   {{page.humandate}}.
@@ -140,6 +142,7 @@ SPECIAL REQUIREMENTS
 
 Modify the block below if there are any special requirements.
 {% endcomment %}
+
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
   Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
@@ -148,10 +151,10 @@ Modify the block below if there are any special requirements.
 {% comment%}
 CODE OF CONDUCT
 {% endcomment %}
+
 <p id="code-of-conduct">
 <strong>Code of Conduct:</strong>  Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
 </p>
-
 
 {% comment %}
 ACCESSIBILITY
@@ -159,6 +162,7 @@ ACCESSIBILITY
 Modify the block below if there are any barriers to accessibility or
 special instructions.
 {% endcomment %}
+
 <p id="accessibility">
   <strong>Accessibility:</strong> We are committed to making this workshop
   accessible to everybody.
@@ -182,6 +186,7 @@ CONTACT EMAIL ADDRESS
 
 Display the contact email address set in the configuration file.
 {% endcomment %}
+
 <p id="contact">
   <strong>Contact</strong>:
   Please email
@@ -207,13 +212,13 @@ Display the contact email address set in the configuration file.
 {% comment %} 
 SURVEYS - DO NOT EDIT SURVEY LINKS 
 {% endcomment %}
+
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 
 <hr/>
-
 
 {% comment %}
 SCHEDULE
@@ -222,6 +227,7 @@ Show the workshop's schedule.  Edit the items and times in the table
 to match your plans.  You may also want to change 'Day 1' and 'Day
 2' to be actual dates or days of the week.
 {% endcomment %}
+
 <h2 id="schedule">Schedule</h2>
 
 {% if site.carpentry == "swc" %}
@@ -243,6 +249,7 @@ where 'YYYY-MM-DD-site' is the identifier for your workshop,
 e.g., '2015-06-10-esu'.
 {% endcomment %}
 {% if page.collaborative_notes %}
+
 <p id="collaborative_notes">
   We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
@@ -256,17 +263,21 @@ SYLLABUS
 Show what topics will be covered.
 
 1. If your workshop is R rather than Python, remove the comment
-around that section and put a comment around the Python section.
+   
+   around that section and put a comment around the Python section.
 2. Some workshops will delete SQL.
 3. Please make sure the list of topics is synchronized with what you
-intend to teach.
+   
+   intend to teach.
 4. You may need to move the div's with class="col-md-6" around inside
-the div's with class="row" to balance the multi-column layout.
+   
+   the div's with class="row" to balance the multi-column layout.
 
 This is one of the places where people frequently make mistakes, so
 please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
+
 <h2 id="syllabus">Syllabus</h2>
 
 {% if site.carpentry == "swc" %}
