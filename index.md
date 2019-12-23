@@ -135,7 +135,7 @@ Modify the block below if there are any special requirements.
 {% endcomment %}
 
 <p id="requirements">
-  <strong>Requirements:</strong> All course participants are required to have a Haka account and password. If you do not have a Haka account, please contact the course staff. Participants can use the classroom computers or bring their own laptop (with a Mac, Linux or Windows operating system). If you wish to bring your own laptop, please ensure that you have administrative privileges on it. Laptops should also have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <strong>Requirements:</strong> All course participants are required to have a Haka account and password. If you do not have a Haka account, please contact the course staff. Participants can use the classroom computers or bring their own laptop (with a Mac, Linux or Windows operating system). If you wish to bring your own laptop, please ensure that you have administrative privileges on it.
 </p>
 
 {% comment%}
@@ -295,7 +295,7 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  To participate in this
   {% if site.carpentry == "swc" %}
   Software Carpentry
   {% elsif site.carpentry == "dc" %}
@@ -304,13 +304,7 @@ please preview your site before committing, and make sure to run
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
-</p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  you will need a Haka account and password to access the CSC Notebooks service. The course will run on RStudio Server instances available via Notebooks. Please contact the course staff if you do not have a Haka account.
 </p>
 
 {% if site.carpentry == "swc" %}
